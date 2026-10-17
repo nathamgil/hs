@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Zync × HS — Proposta</title>
+<style>
+:root{--bg:#0a0a16;--soft:#101020;--panel:#12121f;--border:#20203a;--text:#eceaf5;--muted:#a9a9c2;--em:#10c98d;--sand:#c9a36a;--hs:#DAB76B;--red:#ff8a8a}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font:18px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+section{min-height:100vh;padding:64px 20px;display:flex;align-items:center;border-bottom:1px solid var(--border)}
+.wrap{width:100%;max-width:1000px;margin:0 auto}
+.kicker{color:var(--sand);font-size:14px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;margin-bottom:14px}
+h1{font-size:clamp(34px,6vw,64px);line-height:1.08;letter-spacing:-.02em;margin-bottom:20px}
+h2{font-size:clamp(28px,4.4vw,44px);line-height:1.15;letter-spacing:-.01em;margin-bottom:22px}
+h3{font-size:20px;margin-bottom:6px}
+p.lead{font-size:clamp(18px,2.2vw,22px);color:var(--muted);max-width:780px}
+.em{color:var(--em)}
+.grid{display:grid;gap:16px;margin-top:28px}
+.g2{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.card{background:var(--panel);border:1px solid var(--border);border-radius:16px;padding:22px}
+.card p{color:var(--muted);font-size:16px}
+.num{font-size:44px;font-weight:800;color:var(--em);line-height:1;margin-bottom:6px}
+.brand{font-weight:800;letter-spacing:.04em;color:var(--sand);font-size:22px;margin-bottom:28px}
+.cover{position:relative;overflow:hidden}
+.cover::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,10,22,.96),rgba(10,10,22,.8) 55%,rgba(10,10,22,.55)),url(site/img/drone-poster.jpg) center/cover}
+.cover .wrap{position:relative}
+.logos{display:flex;align-items:center;gap:18px;margin-bottom:30px}
+.logos img{width:84px;height:84px}
+.logos span{color:var(--muted);font-size:26px}
+.quem{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:3px 9px;border-radius:99px;margin-bottom:10px;border:1px solid var(--border);color:var(--sand)}
+blockquote{font-size:20px;line-height:1.45;color:var(--text);margin-bottom:8px}
+.fluxo{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-top:14px}
+.passo{background:var(--soft);border:1px solid var(--border);border-radius:12px;padding:14px;font-size:15px;color:var(--muted);position:relative}
+.passo b{display:block;color:var(--text);font-size:16px}
+.ruim .passo b{color:var(--red)}
+.bom .passo{border-color:rgba(16,201,141,.35)}
+.bom .passo b{color:var(--em)}
+table{width:100%;border-collapse:collapse;margin-top:24px;font-size:16px}
+th,td{text-align:left;padding:14px 12px;border-bottom:1px solid var(--border);vertical-align:top}
+th{color:var(--sand);font-size:13px;letter-spacing:.1em;text-transform:uppercase}
+td.no{color:var(--red)} td.yes{color:var(--em);font-weight:700}
+.tablewrap{overflow-x:auto}
+.btn{display:inline-block;background:var(--em);color:#04130d;font-weight:800;text-decoration:none;padding:15px 24px;border-radius:12px;margin-top:18px;font-size:17px}
+.btn.sec{background:transparent;color:var(--em);border:1.5px solid var(--em)}
+.btn:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.plan{position:relative;display:flex;flex-direction:column}
+.plan.star{border-color:var(--em);box-shadow:0 0 0 1px var(--em)}
+.tag{position:absolute;top:-13px;left:20px;background:var(--em);color:#04130d;font-size:12px;font-weight:800;padding:4px 10px;border-radius:99px;letter-spacing:.08em}
+.price{font-size:40px;font-weight:800;margin:10px 0 0;line-height:1.1}
+.price small{font-size:17px;color:var(--muted);font-weight:600}
+.impl{color:var(--muted);font-size:16px;margin-top:4px}
+ul{padding-left:20px;color:var(--muted);font-size:16px;margin-top:12px}
+li{margin:6px 0}
+li.nao{color:#6f6f88;text-decoration:line-through}
+.steps{counter-reset:s}
+.steps .card::before{counter-increment:s;content:counter(s);display:block;font-size:34px;font-weight:800;color:var(--sand);line-height:1;margin-bottom:10px}
+small.note{display:block;color:var(--muted);font-size:14px;margin-top:18px}
+.calc{display:flex;flex-wrap:wrap;gap:22px;align-items:center}
+.calc label{font-size:15px;color:var(--muted);display:block;margin-bottom:6px}
+.calc input{width:170px;font:inherit;font-size:24px;font-weight:800;color:var(--text);background:var(--soft);border:1.5px solid var(--border);border-radius:12px;padding:10px 14px}
+.calc input:focus{outline:none;border-color:var(--em)}
+.calc .res{flex:1;min-width:240px;font-size:20px}
+.calc .res strong{font-size:40px;color:var(--em);display:block;line-height:1.1}
+.socios{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}
+.socios div{background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:12px 16px;font-size:15px;color:var(--muted)}
+.socios b{color:var(--text);display:block}
+</style>
+</head>
+<body>
+
+<section class="cover">
+ <div class="wrap">
+  <div class="logos"><img src="site/img/icone.svg" alt="HS"><span>×</span><span style="color:var(--sand);font-weight:800;letter-spacing:.06em">ZYNC</span></div>
+  <div class="kicker">Proposta para a HS · outubro de 2026</div>
+  <h1>Parar de atender curioso.<br><span class="em">Começar a lembrar de quem já comprou.</span></h1>
+  <p class="lead">Um site que filtra, um CRM que sabe o iPhone de cada cliente e uma IA que responde por vocês. O site e o CRM já estão montados para vocês testarem hoje.</p>
+ </div>
+</section>
+
+<section>
+ <div class="wrap">
+  <div class="kicker">1 · O que a gente ouviu de vocês</div>
+  <h2>Demanda nunca foi o problema da HS.</h2>
+  <p class="lead">Na nossa conversa, cada um trouxe um lado da mesma dor:</p>
+  <div class="grid g2">
+   <div class="card"><span class="quem">Do lado do balcão</span><blockquote>Tráfego para o WhatsApp trazia muita mensagem e pouca venda. Teve dia de responder até as 3 da manhã.</blockquote><p>O iPhone chama atenção de todo mundo, mas nem todo mundo tem como comprar. E vocês simulam parcela para todos.</p></div>
+   <div class="card"><span class="quem">Do lado da operação</span><blockquote>A base desde 2023 está toda misturada, e quase não existe pós-venda.</blockquote><p>Não dá para saber quem veio por conserto, por película ou por iPhone. A mensagem genérica que sai para todo mundo, ninguém abre.</p></div>
+  </div>
+  <div class="grid g3">
+   <div class="card"><div class="num">2</div><h3>pessoas na loja</h3><p>Cada hora no WhatsApp é uma hora fora da bancada.</p></div>
+   <div class="card"><div class="num">0</div><h3>site próprio</h3><p>O Google mostra 4,6 estrelas com 56 avaliações, mas o campo de site está vazio.</p></div>
+   <div class="card"><div class="num">3</div><h3>números de WhatsApp</h3><p>Um para acessórios e dois para manutenção. O cliente não sabe qual chamar.</p></div>
+  </div>
+ </div>
+</section>
+
+<section>
+ <div class="wrap">
+  <div class="kicker">2 · O que a gente viu de fora</div>
+  <h2>A loja mudou. O Instagram ainda não.</h2>
+  <div class="grid g2">
+   <div class="card"><h3>Destaques no endereço antigo</h3><p>"Localização", "Horário" e o reel fixado ainda mostram o Vasco Plaza. Quem chega pelo Instagram vai para o lugar errado.</p></div>
+   <div class="card"><h3>16 mil seguidores, 0,5% de interação</h3><p>Média de ~85 curtidas por post. O feed está parado desde 1º de outubro.</p></div>
+   <div class="card"><h3>O que funciona, vocês já têm</h3><p>Antes e depois de conserto (293 curtidas), o alerta do iCloud (222) e oferta com preço (4,6 mil views). Esse é o conteúdo que vira anúncio.</p></div>
+   <div class="card"><h3>O nome está mudando</h3><p>"HS" sozinho já aparece em #VemPraHS. E o domínio hsacessorio.com.br é de outra empresa, de São Paulo. Mais um motivo para assumir só HS.</p></div>
+  </div>
+  <small class="note">Levantamento público de 16/10/2026: Instagram, Google Maps e busca no Google.</small>
+ </div>
+</section>
+
+<section>
+ <div class="wrap">
+  <div class="kicker">3 · O caminho do cliente</div>
+  <h2>Hoje vocês filtram na mão. A proposta é filtrar antes.</h2>
+  <h3 style="margin-top:10px;color:var(--red)">Como é hoje</h3>
+  <div class="fluxo ruim">
+   <div class="passo"><b>Anúncio</b>leva direto para o WhatsApp</div>
+   <div class="passo"><b>Todo mundo chama</b>curioso e comprador juntos</div>
+   <div class="passo"><b>Vocês respondem tudo</b>simulação, foto, preço…</div>
+   <div class="passo"><b>"Vou ver depois"</b>e o contato se perde</div>
+  </div>
+  <h3 style="margin-top:28px;color:var(--em)">Como fica</h3>
+  <div class="fluxo bom">
+   <div class="passo"><b>Anúncio por modelo</b>"Seu 12 vale entrada no 15"</div>
+   <div class="passo"><b>Cadastro com R$ 100</b>diz o iPhone que tem, como paga e quando</div>
+   <div class="passo"><b>IA faz a triagem</b>e marca quente, morno ou frio</div>
+   <div class="passo"><b>Vocês falam com quem é quente</b>a mensagem já vem pronta</div>
+   <div class="passo"><b>O CRM lembra</b>novidade do modelo, bateria, upgrade, aniversário</div>
+  </div>
+  <small class="note">O desconto de R$ 100 é a troca: o cliente ganha o cupom e a HS ganha nome, WhatsApp, e-mail e o modelo do aparelho. O curioso desiste no meio do cadastro, e só segue quem quer comprar.</small>
+ </div>
+</section>
+
+<section>
+ <div class="wrap">
+  <div class="kicker">4 · O que a gente entrega</div>
+  <h2>Quatro peças. Duas já estão prontas para vocês testarem.</h2>
+  <div class="grid g2">
+   <div class="card">
+    <h3>Site HS + cadastro com cupom</h3>
+    <ul>
+     <li>Preto e dourado, com o vídeo de drone de vocês</li>
+     <li>iPhones com o preço "de" e o preço "por" com cupom</li>
+     <li>Conserto, acessórios e mapa da Galeria Tenaz</li>
+     <li>Cadastro em 3 passos que gera o cupom no WhatsApp</li>
+    </ul>
+    <a class="btn" href="site/index.html" target="_blank">Abrir o site</a>
+   </div>
+   <div class="card">
+    <h3>CRM HS</h3>
+    <ul>
+     <li>Cada cliente com o aparelho atual, os antigos e o histórico</li>
+     <li>"O que oferecer": upgrade, bateria, película, carregador</li>
+     <li>Bancada: OS com aviso de "aparelho pronto" em 1 clique</li>
+     <li>Campanha por modelo: "todos com 14 Pro Max"</li>
+     <li>Base antiga: importar os contatos e mandar o cupom</li>
+    </ul>
+    <a class="btn" href="site/admin.html" target="_blank">Abrir o CRM</a>
+   </div>
+   <div class="card">
+    <h3>Agente de IA no WhatsApp</h3>
+    <ul>
+     <li>Responde 24 horas, inclusive às 3 da manhã</li>
+     <li>Conserto: pergunta o modelo e o defeito, pede foto e passa a faixa de preço</li>
+     <li>Compra: pergunta o modelo, a forma de pagamento e o prazo</li>
+     <li>Grava tudo no CRM e chama vocês só quando vale a pena</li>
+    </ul>
+   </div>
+   <div class="card">
+    <h3>Tráfego na Meta</h3>
+    <ul>
+     <li><b style="color:var(--text)">Upgrade:</b> anúncio para quem tem modelo antigo</li>
+     <li><b style="color:var(--text)">Conserto:</b> antes e depois, que já é o que mais engaja</li>
+     <li><b style="color:var(--text)">Remarketing</b> da base antiga com o cupom</li>
+     <li>Pixel instalado direito, otimizando para o lead que compra, e não para o mais barato</li>
+    </ul>
+   </div>
+  </div>
+  <small class="note">Na demonstração, os preços, o estoque e os clientes são de exemplo. Os dados reais entram na implantação.</small>
+ </div>
+</section>
+
+<section>
+ <div class="wrap">
+  <div class="kicker">5 · Como funciona</div>
+  <h2>Do sim ao primeiro cliente filtrado.</h2>
+  <div class="grid g3 steps">
+   <div class="card"><h3>Semana 1</h3><p>Vocês mandam a tabela de preços, o estoque, o logo original e o acesso ao Meta Business. A gente define o número oficial do WhatsApp.</p></div>
+   <div class="card"><h3>Dia 10</h3><p>Site e cadastro no ar, pixel instalado, Google com o site. As campanhas de upgrade e de conserto começam.</p></div>
+   <div class="card"><h3>Dia 30</h3><p>CRM com a base antiga importada e o agente de IA atendendo no WhatsApp. Treinamento com vocês dois.</p></div>
+   <div class="card"><h3>Dia 45</h3><p>CRM completo e a primeira leitura de números: custo por cadastro, quentes, vendas. A partir daí, ajuste fino.</p></div>
+  </div>
+  <div class="socios">
+   <div><b>Natham Gil</b>CEO · seu contato direto</div>
+   <div><b>Gabriel Briglia</b>CMO · tráfego e criativo</div>
+   <div><b>Daniel Vaz</b>CTO · agente de IA e sistemas</div>
+  </div>
+ </div>
+</section>
+
+<section>
+ <div class="wrap">
+  <div class="kicker">6 · Investimento</div>
+  <h2>Um valor para montar. Uma mensalidade que se paga com poucos iPhones.</h2>
+  <div class="grid g2">
+   <div class="card plan star">
+    <span class="tag">RECOMENDADO</span>
+    <h3>Completo</h3>
+    <div class="price">R$ 1.800<small> /mês</small></div>
+    <div class="impl">+ R$ 4.500 de implantação (3× de R$ 1.500)</div>
+    <ul>
+     <li>Site HS com cadastro e cupom</li>
+     <li>CRM HS com aparelho por cliente</li>
+     <li>Importação da base antiga</li>
+     <li><b style="color:var(--text)">Agente de IA no WhatsApp</b></li>
+     <li>Gestão do tráfego na Meta (upgrade, conserto e remarketing)</li>
+     <li>Relatório mensal com vocês dois</li>
+    </ul>
+   </div>
+   <div class="card plan">
+    <h3>Essencial</h3>
+    <div class="price">R$ 1.200<small> /mês</small></div>
+    <div class="impl">+ R$ 2.900 de implantação (2× de R$ 1.450)</div>
+    <ul>
+     <li>Site HS com cadastro e cupom</li>
+     <li>CRM HS com aparelho por cliente</li>
+     <li>Importação da base antiga</li>
+     <li class="nao">Agente de IA no WhatsApp</li>
+     <li>Gestão do tráfego na Meta</li>
+     <li>Relatório mensal</li>
+    </ul>
+   </div>
+  </div>
+
+  <div class="card" style="margin-top:16px">
+   <h3>Quantos iPhones pagam o Completo?</h3>
+   <div class="calc" style="margin-top:12px">
+    <div><label for="margem">Quanto sobra para vocês em um iPhone vendido (R$)</label><input id="margem" type="number" inputmode="numeric" min="50" step="50" value="600"></div>
+    <div class="res"><strong id="res-n">3 iPhones</strong><span id="res-t" style="color:var(--muted)">a mais por mês pagam a mensalidade. Menos de 1 por semana.</span></div>
+   </div>
+   <small class="note">R$ 600 é só um ponto de partida. Coloquem a margem real de vocês.</small>
+  </div>
+
+  <div class="grid g2">
+   <div class="card"><h3>O que a mensalidade cobre</h3><p>Gestão das campanhas, hospedagem do site e do CRM, o agente de IA rodando, ajustes de preço e estoque, suporte e a reunião mensal de números.</p></div>
+   <div class="card"><h3>O que fica por conta de vocês</h3><p>A verba dos anúncios, paga direto à Meta (sugestão inicial: R$ 1.500/mês), e o custo das conversas do WhatsApp oficial, também cobrado pela Meta. A Zync não fica com nada disso.</p></div>
+  </div>
+  <small class="note">Ciclo inicial de 90 dias, sem fidelidade longa. Mais à frente, o Full Growth soma o Instagram orgânico (padronização preto e ouro, conteúdo de antes e depois) por R$ 2.900/mês.</small>
+ </div>
+</section>
+
+<section>
+ <div class="wrap">
+  <div class="kicker">7 · Próximo passo</div>
+  <h2>Fechando até <span class="em">sexta, 30/10</span>, o site entra no ar em 10 dias. Antes da Black Friday.</h2>
+  <p class="lead">Marcamos 30 minutos com vocês dois para tirar dúvidas. Depois disso, é só mandar o logo, a tabela de preços e o acesso ao Meta Business.</p>
+  <a class="btn" href="https://wa.me/5561982503561?text=Ol%C3%A1%2C%20Natham!%20Vimos%20a%20proposta%20da%20HS." target="_blank">Falar com a Zync</a>
+  <small class="note">Zync · zynchub.com.br · Natham Gil, Gabriel Briglia e Daniel Vaz</small>
+ </div>
+</section>
+
+<script>
+(function(){
+  var i=document.getElementById('margem'),n=document.getElementById('res-n'),t=document.getElementById('res-t');
+  function calc(){
+    var m=parseFloat(i.value)||0;
+    if(m<50){n.textContent='—';t.textContent='Coloque a margem por aparelho.';return;}
+    var q=Math.ceil(1800/m), s=q/4.3;
+    n.textContent=q+(q===1?' iPhone':' iPhones');
+    t.textContent='a mais por mês pagam a mensalidade. '+(s<1?'Menos de 1 por semana.':'Cerca de '+Math.round(s)+' por semana.');
+  }
+  i.addEventListener('input',calc);calc();
+})();
+</script>
+</body>
+</html>

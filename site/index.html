@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HS · Assistência e loja Apple na Federação</title>
+<meta name="description" content="Conserto de iPhone, seminovos e acessórios na Federação, Salvador. Cadastre-se e ganhe R$ 100 de desconto.">
+<meta name="theme-color" content="#0E0F0D">
+<link rel="icon" href="img/icone.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --preto:#0E0F0D; --carvao:#17181A; --grafite:#222326; --borda:#34343A;
+  --ouro:#DAB76B; --ouro-2:#CA9B45; --ouro-claro:#F8D986;
+  --texto:#F4F0E6; --cinza:#BDB8AC; --verde:#3DDC84;
+  --display:'Cinzel',Georgia,serif; --corpo:'Inter',system-ui,sans-serif;
+  --raio:16px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--preto);color:var(--texto);font-family:var(--corpo);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:var(--display);font-weight:700;line-height:1.15;letter-spacing:.01em}
+.ouro{color:var(--ouro)}
+.kicker{font-size:.8rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--ouro)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;min-height:52px;padding:.8rem 1.5rem;border-radius:100px;font-weight:700;font-size:1rem;transition:transform .15s,background .15s}
+.btn:hover{transform:translateY(-1px)}
+.btn-ouro{background:linear-gradient(135deg,var(--ouro-claro),var(--ouro) 45%,var(--ouro-2));color:#140F05;box-shadow:0 6px 24px rgba(218,183,107,.25)}
+.btn-linha{border:1.5px solid var(--ouro);color:var(--ouro)}
+.btn-linha:hover{background:rgba(218,183,107,.1)}
+.btn-wa{background:var(--verde);color:#062812}
+
+/* topo */
+.topo{position:sticky;top:0;z-index:20;background:rgba(14,15,13,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--borda)}
+.topo .wrap{display:flex;align-items:center;gap:1.4rem;height:70px}
+.marca{display:flex;align-items:center;gap:.7rem}
+.marca svg{width:44px;height:44px}
+.marca span{font-family:var(--display);font-size:1.35rem;color:var(--ouro);letter-spacing:.08em}
+.menu{display:flex;gap:1.6rem;margin-left:auto;font-weight:600;font-size:.95rem;color:var(--cinza)}
+.menu a:hover{color:var(--ouro)}
+.topo .btn{min-height:44px;padding:.5rem 1.1rem;font-size:.92rem}
+@media(max-width:860px){.menu{display:none}.topo .btn{margin-left:auto}}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding:72px 0 64px;border-bottom:1px solid var(--borda)}
+.hero::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(14,15,13,.94) 0%,rgba(14,15,13,.82) 48%,rgba(14,15,13,.55) 100%),linear-gradient(0deg,var(--preto) 0%,transparent 30%);pointer-events:none}
+.hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.hero .wrap{z-index:2}
+@media(max-width:860px){.hero::before{background:linear-gradient(180deg,rgba(14,15,13,.78),rgba(14,15,13,.92) 55%,var(--preto))}}
+@media(prefers-reduced-motion:reduce){.hero-video{display:none}.hero{background:url(img/drone-poster.jpg) center/cover}}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center;position:relative}
+.hero h1{font-size:clamp(2.2rem,5.2vw,3.7rem);margin:.8rem 0 1.1rem}
+.hero p.lead{font-size:1.15rem;color:var(--cinza);max-width:34rem}
+.hero .acoes{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.8rem}
+.provas{display:flex;flex-wrap:wrap;gap:1.6rem;margin-top:2.2rem}
+.provas div strong{display:block;font-family:var(--display);font-size:1.7rem;color:var(--ouro)}
+.provas div span{font-size:.88rem;color:var(--cinza)}
+.cupom-card{background:linear-gradient(160deg,#1d1a12,#121210);border:1.5px solid var(--ouro-2);border-radius:24px;padding:30px;position:relative}
+.cupom-card .valor{font-family:var(--display);font-size:4.2rem;color:var(--ouro);line-height:1}
+.cupom-card .valor small{font-size:1.4rem}
+.cupom-card p{color:var(--cinza);margin:.8rem 0 1.4rem}
+.cupom-card ul{list-style:none;display:grid;gap:.55rem;margin-bottom:1.6rem}
+.cupom-card li{display:flex;gap:.6rem;align-items:flex-start;font-size:.97rem}
+.cupom-card li::before{content:"✓";color:var(--ouro);font-weight:700}
+.cupom-card .btn{width:100%}
+@media(max-width:860px){.hero{padding:44px 0}.hero .wrap{grid-template-columns:1fr;gap:32px}}
+
+section{padding:76px 0;scroll-margin-top:70px}
+.secao-topo{display:flex;flex-wrap:wrap;gap:1rem;align-items:end;justify-content:space-between;margin-bottom:2.2rem}
+.secao-topo h2{font-size:clamp(1.8rem,3.6vw,2.5rem);margin-top:.5rem}
+.secao-topo p{color:var(--cinza);max-width:30rem}
+
+/* aparelhos */
+.grade{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:18px}
+.aparelho{background:var(--carvao);border:1px solid var(--borda);border-radius:var(--raio);padding:22px;display:flex;flex-direction:column;gap:.35rem;position:relative}
+.aparelho:hover{border-color:var(--ouro-2)}
+.aparelho .selo{position:absolute;top:16px;right:16px;font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;background:rgba(218,183,107,.14);color:var(--ouro);padding:.3rem .65rem;border-radius:100px}
+.aparelho .ico{width:46px;height:46px;border-radius:12px;background:var(--grafite);display:grid;place-items:center;margin-bottom:.6rem}
+.aparelho h3{font-family:var(--corpo);font-size:1.18rem;font-weight:700}
+.aparelho .det{color:var(--cinza);font-size:.92rem}
+.preco-de{color:var(--cinza);font-size:.9rem;text-decoration:line-through;margin-top:.8rem}
+.preco-por{font-size:1.5rem;font-weight:700;color:var(--ouro)}
+.preco-por small{font-size:.82rem;font-weight:600;color:var(--cinza);display:block}
+.aparelho .btn{margin-top:1rem;min-height:46px;font-size:.93rem}
+
+/* upgrade */
+.upgrade{background:linear-gradient(120deg,#1b170e,#0e0f0d 70%);border-top:1px solid var(--borda);border-bottom:1px solid var(--borda)}
+.upgrade .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.passos{display:grid;gap:14px}
+.passo{display:flex;gap:16px;background:var(--carvao);border:1px solid var(--borda);border-radius:var(--raio);padding:18px 20px}
+.passo b{font-family:var(--display);font-size:1.5rem;color:var(--ouro);min-width:28px}
+.passo p{color:var(--cinza);font-size:.95rem}
+.passo strong{display:block;color:var(--texto)}
+@media(max-width:860px){.upgrade .wrap{grid-template-columns:1fr}}
+
+/* serviços */
+.servicos{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:12px}
+.servico{display:flex;align-items:center;gap:14px;background:var(--carvao);border:1px solid var(--borda);border-radius:14px;padding:16px 18px}
+.servico div{flex:1}
+.servico strong{display:block;font-size:1.03rem}
+.servico span{color:var(--cinza);font-size:.9rem}
+.servico .pr{text-align:right;font-weight:700;color:var(--ouro);white-space:nowrap}
+.servico .pr small{display:block;font-size:.72rem;color:var(--cinza);font-weight:600}
+.tag-promo{display:inline-block;background:var(--ouro);color:#140F05;font-size:.68rem;font-weight:800;padding:.12rem .45rem;border-radius:5px;margin-left:.4rem;vertical-align:2px}
+
+/* acessórios */
+.acess{background:var(--carvao);border:1px solid var(--borda);border-radius:var(--raio);overflow:hidden}
+.acess .foto{aspect-ratio:4/3;background:radial-gradient(circle at 50% 40%,#2a2618,var(--grafite)) center/cover;display:grid;place-items:center;color:var(--ouro)}
+.acess .txt{padding:16px 18px}
+.acess strong{display:block}
+.acess span{color:var(--cinza);font-size:.9rem}
+
+/* cadastro */
+.cadastro{background:var(--carvao);border-top:1px solid var(--borda)}
+.cad-box{display:grid;grid-template-columns:.9fr 1.1fr;gap:44px;align-items:start}
+@media(max-width:860px){.cad-box{grid-template-columns:1fr}}
+form{background:var(--preto);border:1.5px solid var(--ouro-2);border-radius:22px;padding:28px}
+.etapa-ind{display:flex;gap:6px;margin-bottom:1.3rem}
+.etapa-ind i{flex:1;height:5px;border-radius:5px;background:var(--borda)}
+.etapa-ind i.on{background:var(--ouro)}
+.etapa{display:none}.etapa.ativa{display:block}
+.etapa h3{font-family:var(--corpo);font-size:1.3rem;margin-bottom:1rem}
+.campo{margin-bottom:1rem}
+.campo label{display:block;font-size:.9rem;font-weight:600;margin-bottom:.4rem;color:var(--texto)}
+.campo input,.campo select{width:100%;min-height:52px;padding:.8rem 1rem;border-radius:12px;border:1.5px solid var(--borda);background:var(--carvao);color:var(--texto);font:inherit}
+.campo input:focus,.campo select:focus{outline:none;border-color:var(--ouro)}
+.opcoes{display:grid;gap:10px}
+.opcoes label{display:flex;align-items:center;gap:.8rem;padding:.9rem 1rem;border:1.5px solid var(--borda);border-radius:12px;cursor:pointer;min-height:56px;font-weight:600}
+.opcoes label small{display:block;font-weight:400;color:var(--cinza);font-size:.85rem}
+.opcoes input{accent-color:var(--ouro);width:20px;height:20px;flex:none}
+.opcoes label:has(input:checked){border-color:var(--ouro);background:rgba(218,183,107,.08)}
+.nav-etapa{display:flex;gap:.7rem;margin-top:1.4rem}
+.nav-etapa .btn{flex:1}
+.erro{color:#FF8A80;font-size:.9rem;margin-top:.5rem;min-height:1.2em}
+.lgpd{font-size:.8rem;color:var(--cinza);margin-top:.9rem}
+.sucesso{text-align:center}
+.sucesso .codigo{font-family:var(--display);font-size:2.1rem;color:var(--ouro);border:2px dashed var(--ouro);border-radius:14px;padding:.7rem;margin:1rem 0;letter-spacing:.08em}
+.sucesso p{color:var(--cinza)}
+
+/* local */
+.local .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.local dl{display:grid;grid-template-columns:auto 1fr;gap:.5rem 1.4rem;margin:1.2rem 0 1.6rem}
+.local dt{color:var(--cinza)}
+.mapa{border-radius:var(--raio);overflow:hidden;border:1px solid var(--borda);min-height:320px;background:var(--carvao)}
+.mapa iframe{width:100%;height:100%;min-height:320px;border:0;filter:grayscale(.4) invert(.9) hue-rotate(180deg)}
+@media(max-width:860px){.local .wrap{grid-template-columns:1fr}}
+footer{border-top:1px solid var(--borda);padding:28px 0;color:var(--cinza);font-size:.88rem}
+footer .wrap{display:flex;flex-wrap:wrap;gap:1rem;justify-content:space-between}
+.flutuante{position:fixed;right:18px;bottom:18px;z-index:30;width:60px;height:60px;border-radius:50%;background:var(--verde);display:grid;place-items:center;box-shadow:0 8px 24px rgba(0,0,0,.4)}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="logo" viewBox="0 0 100 100">
+    <circle cx="50" cy="50" r="47" fill="#0E0F0D" stroke="url(#g)" stroke-width="3"/>
+    <path d="M33 33 L37 20 L44 28 L50 16 L56 28 L63 20 L67 33 Z" fill="url(#g)"/>
+    <text x="50" y="72" text-anchor="middle" font-family="Cinzel,Georgia,serif" font-weight="700" font-size="34" fill="url(#g)">HS</text>
+    <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F8D986"/><stop offset=".5" stop-color="#DAB76B"/><stop offset="1" stop-color="#CA9B45"/></linearGradient></defs>
+  </symbol>
+  <symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1.1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3Z"/></symbol>
+  <symbol id="phone" viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="3" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M10 5h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+</svg>
+
+<header class="topo">
+  <div class="wrap">
+    <a href="#" class="marca" aria-label="HS, início"><svg><use href="#logo"/></svg><span>HS</span></a>
+    <nav class="menu">
+      <a href="#iphones">iPhones</a><a href="#upgrade">Troca</a><a href="#conserto">Conserto</a><a href="#acessorios">Acessórios</a><a href="#local">Onde estamos</a>
+    </nav>
+    <a href="#cadastro" class="btn btn-ouro">Ganhar R$ 100</a>
+  </div>
+</header>
+
+<section class="hero">
+  <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="img/drone-poster.jpg" aria-hidden="true">
+    <source src="img/drone-hero.mp4" type="video/mp4">
+  </video>
+  <div class="wrap">
+    <div>
+      <span class="kicker">Federação · Salvador · há 10 anos</span>
+      <h1>Seu iPhone em <span class="ouro">mãos de quem entende.</span></h1>
+      <p class="lead">Conserto, seminovos revisados e acessórios para iPhone. Mais de 10 mil aparelhos já passaram pela nossa bancada.</p>
+      <div class="acoes">
+        <a href="#cadastro" class="btn btn-ouro">Quero meu desconto</a>
+        <a href="#conserto" class="btn btn-linha">Orçar conserto</a>
+      </div>
+      <div class="provas">
+        <div><strong>+10 mil</strong><span>consertos feitos</span></div>
+        <div><strong>4,6 ★</strong><span>no Google</span></div>
+        <div><strong>10 anos</strong><span>só com celular</span></div>
+      </div>
+    </div>
+    <aside class="cupom-card">
+      <span class="kicker">Cadastro HS</span>
+      <div class="valor"><small>R$</small> 100 <small>OFF</small></div>
+      <p>Responda 4 perguntas rápidas e receba um cupom para usar na compra do seu iPhone.</p>
+      <ul>
+        <li>Vale na compra de iPhone ou na troca</li>
+        <li>Cupom no seu WhatsApp na hora</li>
+        <li>Válido por 7 dias</li>
+      </ul>
+      <a href="#cadastro" class="btn btn-ouro">Gerar meu cupom</a>
+    </aside>
+  </div>
+</section>
+
+<section id="iphones">
+  <div class="wrap">
+    <div class="secao-topo">
+      <div><span class="kicker">Seminovos revisados</span><h2>iPhones na loja</h2></div>
+      <p>Todos com bateria medida, garantia e nota. Preço com o cupom de cadastro já aplicado.</p>
+    </div>
+    <div class="grade" id="lista-aparelhos"></div>
+  </div>
+</section>
+
+<section class="upgrade" id="upgrade">
+  <div class="wrap">
+    <div>
+      <span class="kicker">Troca com upgrade</span>
+      <h2 style="font-size:clamp(1.8rem,3.6vw,2.5rem);margin:.6rem 0 1rem">Seu iPhone atual <span class="ouro">vale entrada</span> no próximo.</h2>
+      <p style="color:var(--cinza);margin-bottom:1.6rem">Avaliamos seu aparelho na hora, abatemos do valor do novo e você ainda soma os R$ 100 do cadastro.</p>
+      <a href="#cadastro" class="btn btn-ouro" data-interesse="comprar" data-pag="troca">Simular minha troca</a>
+    </div>
+    <div class="passos">
+      <div class="passo"><b>1</b><p><strong>Cadastre-se e diga qual iPhone tem</strong>Leva menos de um minuto.</p></div>
+      <div class="passo"><b>2</b><p><strong>A gente te chama no WhatsApp</strong>Com a avaliação e o modelo que cabe no seu bolso.</p></div>
+      <div class="passo"><b>3</b><p><strong>Traga o seu e saia com o novo</strong>Dados transferidos na loja, sem dor de cabeça.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="conserto">
+  <div class="wrap">
+    <div class="secao-topo">
+      <div><span class="kicker">Assistência técnica</span><h2>Conserto de iPhone</h2></div>
+      <p>Diagnóstico na hora. O orçamento vai pelo WhatsApp, antes de qualquer serviço.</p>
+    </div>
+    <div class="servicos" id="lista-servicos"></div>
+    <div style="margin-top:1.8rem"><a class="btn btn-wa" id="wa-manut" target="_blank" rel="noopener"><svg width="22" height="22"><use href="#wa"/></svg>Pedir orçamento</a></div>
+  </div>
+</section>
+
+<section id="acessorios" style="padding-top:0">
+  <div class="wrap">
+    <div class="secao-topo">
+      <div><span class="kicker">Acessórios</span><h2>Capas, películas e carregadores</h2></div>
+      <p>Diga seu modelo e a gente separa o que serve no seu iPhone.</p>
+    </div>
+    <div class="grade" id="lista-acess" style="grid-template-columns:repeat(auto-fill,minmax(210px,1fr))"></div>
+  </div>
+</section>
+
+<section class="cadastro" id="cadastro">
+  <div class="wrap cad-box">
+    <div>
+      <span class="kicker">Cadastro HS</span>
+      <h2 style="font-size:clamp(1.8rem,3.6vw,2.5rem);margin:.6rem 0 1rem">Ganhe <span class="ouro">R$ 100</span> no seu próximo iPhone.</h2>
+      <p style="color:var(--cinza)">Responda rapidinho para a gente te atender do jeito certo. O cupom chega pelo WhatsApp e vale por 7 dias.</p>
+      <p style="color:var(--cinza);margin-top:1rem">Sem spam: você só recebe novidade do seu modelo.</p>
+    </div>
+    <form id="form-cad" novalidate>
+      <div class="etapa-ind"><i class="on"></i><i></i><i></i></div>
+
+      <div class="etapa ativa" data-e="1">
+        <h3>O que você procura?</h3>
+        <div class="opcoes">
+          <label><input type="radio" name="interesse" value="comprar"><span>Comprar ou trocar de iPhone<small>Seminovo revisado ou upgrade com o meu</small></span></label>
+          <label><input type="radio" name="interesse" value="conserto"><span>Consertar meu aparelho<small>Tela, bateria, Face ID, placa…</small></span></label>
+          <label><input type="radio" name="interesse" value="acessorios"><span>Acessórios<small>Capa, película, carregador</small></span></label>
+        </div>
+        <div class="campo" style="margin-top:1rem"><label for="modelo_atual">Qual celular você usa hoje?</label><select id="modelo_atual" name="modelo_atual"></select></div>
+        <div class="campo" id="campo-desejado"><label for="modelo_desejado">Qual iPhone você quer?</label><select id="modelo_desejado" name="modelo_desejado"></select></div>
+        <div class="erro" data-erro="1"></div>
+        <div class="nav-etapa"><button type="button" class="btn btn-ouro" data-ir="2">Continuar</button></div>
+      </div>
+
+      <div class="etapa" data-e="2">
+        <h3>Como e quando?</h3>
+        <div class="campo"><label>Forma de pagamento</label>
+          <div class="opcoes">
+            <label><input type="radio" name="pagamento" value="pix"><span>À vista no Pix</span></label>
+            <label><input type="radio" name="pagamento" value="cartao"><span>Cartão parcelado</span></label>
+            <label><input type="radio" name="pagamento" value="troca"><span>Dar meu iPhone na troca + diferença</span></label>
+          </div>
+        </div>
+        <div class="campo"><label for="prazo">Para quando?</label>
+          <select id="prazo" name="prazo"><option value="">Escolha</option><option value="semana">Ainda esta semana</option><option value="mes">Este mês</option><option value="pesquisando">Só estou pesquisando</option></select>
+        </div>
+        <div class="erro" data-erro="2"></div>
+        <div class="nav-etapa"><button type="button" class="btn btn-linha" data-ir="1">Voltar</button><button type="button" class="btn btn-ouro" data-ir="3">Continuar</button></div>
+      </div>
+
+      <div class="etapa" data-e="3">
+        <h3>Para onde mandamos o cupom?</h3>
+        <div class="campo"><label for="nome">Seu nome</label><input id="nome" name="nome" autocomplete="name" placeholder="Nome e sobrenome"></div>
+        <div class="campo"><label for="whats">WhatsApp</label><input id="whats" name="whats" inputmode="tel" autocomplete="tel" placeholder="(71) 9 0000-0000"></div>
+        <div class="campo"><label for="email">E-mail <span style="color:var(--cinza);font-weight:400">(opcional)</span></label><input id="email" name="email" type="email" autocomplete="email" placeholder="voce@email.com"></div>
+        <div class="campo"><label for="nasc">Aniversário <span style="color:var(--cinza);font-weight:400">(opcional, tem mimo)</span></label><input id="nasc" name="nasc" type="date"></div>
+        <div class="erro" data-erro="3"></div>
+        <div class="nav-etapa"><button type="button" class="btn btn-linha" data-ir="2">Voltar</button><button type="submit" class="btn btn-ouro">Gerar cupom</button></div>
+        <p class="lgpd">Ao enviar, você autoriza a HS a falar com você por WhatsApp e e-mail sobre produtos e serviços. Dá para sair quando quiser.</p>
+      </div>
+
+      <div class="etapa sucesso" data-e="4">
+        <span class="kicker">Cupom gerado</span>
+        <div class="codigo" id="cupom-codigo">HS100-0000</div>
+        <p id="cupom-txt">R$ 100 de desconto, válido até —.</p>
+        <a class="btn btn-wa" id="cupom-wa" target="_blank" rel="noopener" style="width:100%;margin-top:1.2rem"><svg width="22" height="22"><use href="#wa"/></svg>Receber no WhatsApp</a>
+      </div>
+    </form>
+  </div>
+</section>
+
+<section class="local" id="local">
+  <div class="wrap">
+    <div>
+      <span class="kicker">Endereço novo</span>
+      <h2 style="font-size:clamp(1.8rem,3.6vw,2.5rem);margin:.6rem 0 .8rem">Estamos na <span class="ouro">Galeria Tenaz</span></h2>
+      <p id="end" style="font-size:1.08rem"></p>
+      <dl id="horario"></dl>
+      <a class="btn btn-linha" id="link-maps" target="_blank" rel="noopener">Abrir no mapa</a>
+    </div>
+    <div class="mapa"><iframe loading="lazy" title="Mapa da HS" src="https://maps.google.com/maps?q=Rua%20S%C3%A9rgio%20de%20Carvalho%2028%20Federa%C3%A7%C3%A3o%20Salvador&output=embed"></iframe></div>
+  </div>
+</section>
+
+<footer><div class="wrap"><span>HS · Assistência e loja Apple · Salvador-BA</span><a href="https://instagram.com/hsacessorios_oficial" target="_blank" rel="noopener">@hsacessorios_oficial</a></div></footer>
+<a class="flutuante" id="wa-flut" target="_blank" rel="noopener" aria-label="Falar no WhatsApp"><svg width="32" height="32" style="color:#062812"><use href="#wa"/></svg></a>
+
+<script src="assets/config.js?v=20261017202835"></script>
+<script src="assets/dados.js?v=20261017202835"></script>
+<script>
+(function () {
+  var C = window.HS, $ = function (s) { return document.querySelector(s); };
+  var R = HSDB.dinheiro;
+
+  $('#lista-aparelhos').innerHTML = C.aparelhos.map(function (a) {
+    return '<article class="aparelho">' + (a.selo ? '<span class="selo">' + a.selo + '</span>' : '') +
+      '<div class="ico"><svg width="24" height="24" style="color:var(--ouro)"><use href="#phone"/></svg></div>' +
+      '<h3>' + a.modelo + '</h3><span class="det">' + a.det + '</span>' +
+      '<span class="preco-de">' + R(a.preco) + '</span>' +
+      '<span class="preco-por">' + R(a.preco - C.desconto) + '<small>com cupom de cadastro · ou 12x no cartão</small></span>' +
+      '<a href="#cadastro" class="btn btn-ouro" data-interesse="comprar" data-modelo="' + a.modelo + '">Quero esse</a></article>';
+  }).join('');
+
+  $('#lista-servicos').innerHTML = C.servicos.map(function (s) {
+    return '<div class="servico"><div><strong>' + s.nome + (s.promo ? '<span class="tag-promo">PROMO</span>' : '') + '</strong><span>' + s.det + '</span></div>' +
+      '<div class="pr">' + (s.preco ? '<small>a partir de</small>' + R(s.preco) : 'Orçamento<small>no WhatsApp</small>') + '</div></div>';
+  }).join('');
+
+  $('#lista-acess').innerHTML = C.acessorios.map(function (a) {
+    return '<article class="acess"><div class="foto" style="' + (a.img ? 'background-image:url(' + a.img + ')' : '') + '">' + (a.img ? '' : '<svg width="40" height="40"><use href="#phone"/></svg>') + '</div>' +
+      '<div class="txt"><strong>' + a.nome + '</strong><span>' + a.det + '</span>' + (a.preco ? '<div style="color:var(--ouro);font-weight:700;margin-top:.3rem">' + R(a.preco) + (a.promo ? ' <span class="tag-promo">PROMO</span>' : '') + '</div>' : '') + '</div></article>';
+  }).join('');
+
+  var opts = C.modelos.map(function (m) { return '<option>' + m + '</option>'; }).join('');
+  $('#modelo_atual').innerHTML = '<option value="">Escolha</option>' + opts;
+  $('#modelo_desejado').innerHTML = '<option value="">Ainda não sei</option>' + C.modelos.filter(function (m) { return m.indexOf('iPhone') === 0 && m.indexOf('anterior') < 0; }).map(function (m) { return '<option>' + m + '</option>'; }).join('');
+
+  $('#end').innerHTML = C.endereco.linha1 + '<br>' + C.endereco.linha2;
+  $('#horario').innerHTML = C.horario.map(function (h) { return '<dt>' + h[0] + '</dt><dd>' + h[1] + '</dd>'; }).join('');
+  $('#link-maps').href = C.endereco.maps;
+  $('#wa-manut').href = HSDB.wa(C.whats.manutencao.numero, 'Olá, HS! Quero um orçamento de conserto. Meu iPhone é um ');
+  $('#wa-flut').href = HSDB.wa(C.whats.acessorios.numero, 'Olá, HS! Vim pelo site.');
+
+  /* ---- formulário em etapas ---- */
+  var form = $('#form-cad');
+  function marcado(n) { var e = form.querySelector('input[name="' + n + '"]:checked'); return e ? e.value : ''; }
+  function mostra(n) {
+    form.querySelectorAll('.etapa').forEach(function (e) { e.classList.toggle('ativa', e.dataset.e == n); });
+    form.querySelectorAll('.etapa-ind i').forEach(function (i, k) { i.classList.toggle('on', k < n); });
+  }
+  function ajustaDesejado() { $('#campo-desejado').style.display = marcado('interesse') === 'conserto' || marcado('interesse') === 'acessorios' ? 'none' : ''; }
+  form.addEventListener('change', ajustaDesejado);
+  function valida(n) {
+    var e = '';
+    if (n == 1) { if (!marcado('interesse')) e = 'Escolha o que você procura.'; else if (!form.modelo_atual.value) e = 'Diga qual celular você usa hoje.'; }
+    if (n == 2) { if (!marcado('pagamento')) e = 'Escolha a forma de pagamento.'; else if (!form.prazo.value) e = 'Diga para quando é.'; }
+    if (n == 3) { if (form.nome.value.trim().length < 3) e = 'Escreva seu nome.'; else if (HSDB.soDigitos(form.whats.value).length < 10) e = 'Confira o WhatsApp com DDD.'; }
+    form.querySelector('[data-erro="' + n + '"]').textContent = e;
+    return !e;
+  }
+  form.querySelectorAll('[data-ir]').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var atual = +form.querySelector('.etapa.ativa').dataset.e, alvo = +b.dataset.ir;
+      if (alvo > atual && !valida(atual)) return;
+      mostra(alvo);
+    });
+  });
+  form.addEventListener('submit', function (ev) {
+    ev.preventDefault();
+    if (!valida(3)) return;
+    var l = HSDB.novoCadastro({
+      nome: form.nome.value.trim(), whats: form.whats.value, email: form.email.value.trim(), nasc: form.nasc.value,
+      interesse: marcado('interesse'), modelo_atual: form.modelo_atual.value, modelo_desejado: form.modelo_desejado.value,
+      pagamento: marcado('pagamento'), prazo: form.prazo.value
+    });
+    var val = new Date(); val.setDate(val.getDate() + C.validadeCupomDias);
+    var valStr = val.toLocaleDateString('pt-BR');
+    $('#cupom-codigo').textContent = l.cupom;
+    $('#cupom-txt').textContent = 'R$ ' + C.desconto + ' de desconto, válido até ' + valStr + '.';
+    var num = l.interesse === 'conserto' ? C.whats.manutencao.numero : C.whats.acessorios.numero;
+    var msg = 'Olá, HS! Sou ' + l.nome.split(' ')[0] + ' e fiz o cadastro no site. Meu cupom é ' + l.cupom + '. ' +
+      (l.interesse === 'comprar' ? 'Tenho um ' + l.modelo_atual + ' e quero ' + (l.modelo_desejado ? 'o ' + l.modelo_desejado : 'um iPhone') + '.' :
+       l.interesse === 'conserto' ? 'Preciso consertar meu ' + l.modelo_atual + '.' : 'Quero acessórios para o meu ' + l.modelo_atual + '.');
+    $('#cupom-wa').href = HSDB.wa(num, msg);
+    mostra(4);
+  });
+
+  // Botões "Quero esse" / "Simular troca" já preenchem o formulário.
+  document.addEventListener('click', function (ev) {
+    var b = ev.target.closest('[data-interesse]'); if (!b) return;
+    var r = form.querySelector('input[name="interesse"][value="' + b.dataset.interesse + '"]'); if (r) r.checked = true;
+    if (b.dataset.modelo) form.modelo_desejado.value = b.dataset.modelo;
+    if (b.dataset.pag) { var p = form.querySelector('input[name="pagamento"][value="' + b.dataset.pag + '"]'); if (p) p.checked = true; }
+    ajustaDesejado(); mostra(1);
+  });
+})();
+</script>
+</body>
+</html>
