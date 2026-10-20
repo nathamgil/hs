@@ -212,7 +212,7 @@ small.note{display:block;color:var(--muted);font-size:14px;margin-top:18px}
    <div class="card plan star">
     <span class="tag">RECOMENDADO</span>
     <h3>Completo</h3>
-    <div class="price">R$ 1.800<small> /mês</small></div>
+    <div class="price">R$ 2.000<small> /mês</small></div>
     <div class="impl">+ R$ 4.500 de implantação (3× de R$ 1.500)</div>
     <ul>
      <li>Site HS com cadastro e cupom</li>
@@ -225,7 +225,7 @@ small.note{display:block;color:var(--muted);font-size:14px;margin-top:18px}
    </div>
    <div class="card plan">
     <h3>Essencial</h3>
-    <div class="price">R$ 1.200<small> /mês</small></div>
+    <div class="price">R$ 1.500<small> /mês</small></div>
     <div class="impl">+ R$ 2.900 de implantação (2× de R$ 1.450)</div>
     <ul>
      <li>Site HS com cadastro e cupom</li>
@@ -242,7 +242,7 @@ small.note{display:block;color:var(--muted);font-size:14px;margin-top:18px}
    <h3>Quantos iPhones pagam o Completo?</h3>
    <div class="calc" style="margin-top:12px">
     <div><label for="margem">Quanto sobra para vocês em um iPhone vendido (R$)</label><input id="margem" type="number" inputmode="numeric" min="50" step="50" value="600"></div>
-    <div class="res"><strong id="res-n">3 iPhones</strong><span id="res-t" style="color:var(--muted)">a mais por mês pagam a mensalidade. Menos de 1 por semana.</span></div>
+    <div class="res"><strong id="res-n">4 iPhones</strong><span id="res-t" style="color:var(--muted)">a mais por mês pagam a mensalidade. Cerca de 1 por semana.</span></div>
    </div>
    <small class="note">R$ 600 é só um ponto de partida. Coloquem a margem real de vocês.</small>
   </div>
@@ -271,7 +271,7 @@ small.note{display:block;color:var(--muted);font-size:14px;margin-top:18px}
   function calc(){
     var m=parseFloat(i.value)||0;
     if(m<50){n.textContent='—';t.textContent='Coloque a margem por aparelho.';return;}
-    var q=Math.ceil(1800/m), s=q/4.3;
+    var q=Math.ceil(2000/m), s=q/4.3;
     n.textContent=q+(q===1?' iPhone':' iPhones');
     t.textContent='a mais por mês pagam a mensalidade. '+(s<1?'Menos de 1 por semana.':'Cerca de '+Math.round(s)+' por semana.');
   }
